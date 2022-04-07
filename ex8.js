@@ -2,7 +2,15 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 function cortaPorAqui(corteIzq, corteDer, array) {
-    return;
+    // findIndex solo pilla funciones
+    let indiceIzq = array.findIndex((x) => x == corteIzq);
+    // Buscame el indice de la palabra x en todo el array, x es igual a lo que te paso como corteIzq
+
+    let indiceDer = array.findIndex((x) => x == corteDer);
+    // Buscame el indice de la palabra x en todo el array, x es igual a lo que te paso como corteDer
+
+    return array.slice(indiceIzq, indiceDer + 1);
+    // Corta el array que te paso por el indice de corteIzq y el indice de corteDer+1 (para incluir esa palabra)
 }
 
 /**
